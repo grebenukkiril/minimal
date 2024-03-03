@@ -1,0 +1,23 @@
+@import "../utils/vars";
+@import "../utils/mixin";
+.bestsellers {
+    &__content {
+        @include displayFlax ($alignItems: center, $justifyContent: center, $gap: 30px, $flexDirection: column);
+        .bestsellers-catalog {
+            display: grid;
+            grid-template-rows: 256px 256px;
+            grid-template-columns: 258px 258px 258px 258px;
+            &__item {
+                @include displayFlax ($alignItems: flex-start, $justifyContent: center, $gap: 10px, $flexDirection: column);
+            }
+            &__img {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 5px;
+            }
+            &__item-name {}
+            &__item-value {}
+        }
+    }
+    &__title {}
+}

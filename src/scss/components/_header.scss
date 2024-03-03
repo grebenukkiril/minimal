@@ -1,6 +1,7 @@
 @import "../utils/vars";
 @import "../utils/mixin";
 .header {
+    background-color: #F7FAFF;
     &__inner {
         margin-bottom: 64px;
         .navbar {
@@ -61,15 +62,20 @@
         transform: translateY(-9px);
     }          
 }
-@media (max-width: 1330px){
+@media (max-width: 1320px){
+    .container{
+        width: 1200px;
+    }
+}
+@media (max-width: 1200px) {
     .container{
         width: 1024px;
     }
 }
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
     .container{
-        width: 768px;
-        padding: 0 32px;
+        width: 704px;
+        padding: 0;
     }
     .header{
         &__burger-btn{
@@ -97,7 +103,7 @@
         .header__inner{
             position: fixed;
             left: 50%;
-            margin-left: -512px;
+            margin-left: -352px;
         }
         .menu{
             position: fixed;
@@ -113,25 +119,18 @@
             transform: translateY(0) rotate(-45deg);
         } 
     }
-    .header.open{ 
-        .header__inner{
-            margin-left: -384px;
-        }
-    }
 }
-@media (max-width:768px) {
+@media (max-width: 704px) {
     .container{
         width: 568px;
     }
     .header.open{ 
         .header__inner{
-            position: fixed;
-            left: 50%;
             margin-left: -284px;
         }
     }
 }
-@media (max-width:568px) {
+@media (max-width: 568px){
     .container{
         width: 374px;
     }
@@ -139,11 +138,19 @@
         width: 100px;
         height: 16px;
     }
-    .header.open{ 
+    .header.open{
         .header__inner{
-            position: fixed;
-            left: 50%;
             margin-left: -187px;
+        }
+    }
+}
+@media (max-width:374px){
+    .container{
+        width: 342px;
+    }
+    .header.open{
+        .header__inner{
+            margin-left: -171px;
         }
     }
 }

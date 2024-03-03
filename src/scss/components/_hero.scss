@@ -1,6 +1,7 @@
 @import "../utils/vars";
 @import "../utils/mixin";
 .hero {
+    margin-bottom: 100px;
     &__content {
         @include displayFlax ($alignItems: center, $justifyContent: center, $gap: 25px, $flexDirection: row);
     }
@@ -54,19 +55,12 @@
         }
         &__title{
             padding-bottom: 378px;
+            font-size: 37px;
+            line-height: 42px;
         }
         &__content{
             flex-direction: column;
             align-items: flex-start;
-        }
-    }
-}
-@media (max-width:768px) {
-    .hero{
-
-        &__title{
-            font-size: 37px;
-            line-height: 42px; /* 150% */
         }
     }
 }
@@ -77,8 +71,10 @@
         background-size: cover;
         background-position: center;
         padding: 140px 0 313px;
+        margin-bottom: 64px;
         &__information {
             background-image: none;
+            width: 100%;
         }
         &__text{
             padding: 0;
